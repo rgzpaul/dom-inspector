@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('change', function () {
         chrome.storage.sync.set({ inspectorEnabled: toggle.checked }, function () {
             chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-                chrome.tabs.reload(tabs[0].id);
+                chrome.tabs.sendMessage(tabs[0].id, {
+                    action: 'toggleInspector',
+                    enabled: toggle.checked
+                });
             });
         });
     });
