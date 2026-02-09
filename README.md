@@ -13,7 +13,13 @@ A lightweight Chrome extension that lets you inspect DOM element hierarchies on 
 
 ## Installation
 
-No build step is required. The extension is written in vanilla JavaScript.
+### Chrome Web Store
+
+Install directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/epaghlghjigakdmldmnemeccbicnikcn).
+
+### Manual (Developer Mode)
+
+If you prefer to load from source:
 
 1. Clone or download this repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
